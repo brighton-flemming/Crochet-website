@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>User Registration Successful</h1>
+
+    <div class="profile-pic">
+        <strong>Profile Picture:</strong> <img src="{{ user.profile_picture }}" alt="{{ user.first_name }} {{ user.last_name }} ">
+    </div>
+
+    <div class="user-details">
+        <p><strong>First Name:</strong> {{ user.first_name }}</p>
+        <p><strong>Last Name:</strong> {{ user.last_name }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Bio:</strong> {{ user.bio }}</p>
+    </div>
+
+    <button onclick="location.href='{{ path('app_home') }}'">Home</button>
+{% endblock %}

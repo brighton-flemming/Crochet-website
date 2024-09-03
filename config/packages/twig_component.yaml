@@ -1,0 +1,5 @@
+twig_component:
+    anonymous_template_directory: 'home/'
+    defaults:
+        # Namespace & directory for home
+        App\Twig\Components\: 'home/'

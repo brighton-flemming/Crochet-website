@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block head %}
+    <head>
+        <div class="container-fluid">
+          <title>
+              <a href="{{ path('app_home') }}" class="navbar-brand">
+             {% block title %} Crochet by Cristyn{% endblock %}
+              <i class="bi bi-suit-heart"></i>
+              </a>
+          </title>
+        </div>
+    </head>
+{% endblock %}
+
+
+{% block body %}
+    <body>
+    <header>
+        <nav class="navbar bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" onclick="location.href='{{ path('app_about') }}'">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="location.href='{{ path('app_product') }}'">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="location.href='{{ path('app_order') }}'" >Orders</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="location.href='{{ path('new_user') }}'">Sign up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Log in</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container-fluid">
+            <h2>It's almost magic with crochet</h2>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </header>
+    </body>
+
+{% endblock %}
